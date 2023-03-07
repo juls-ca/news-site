@@ -1,0 +1,116 @@
+/* BASE ----------------------------------------------- */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 h6 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+
+
+article {
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    background-color: #fafafa;
+    padding: 1rem;
+    margin: 1rem auto;
+    position: relative;
+}
+
+div { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+div p { /* descendant selector, targets news topics para */
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    color: #fafafa;
+    width: max-content;
+    padding: 0.25rem 0.5rem;
+}
+
+div+p { /* adjacent selector, tagets main para*/
+    font-weight: 600;
+}
+
+div+p ~ p { /* general sibling selector, targets sub para*/
+    color: #393939;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+
+@media (min-width: 50rem){
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+    
+    section:first-child { /* pseudo selector */
+        display: block;
+    }
+    
+    section h2 { /* descendant selector */
+        grid-column: 1 / 4;
+    }
+
+    article {
+        margin: 0;
+    }
+}
+
+/* FOOTER ---------------------------------------------------------- */
+footer {
+    background-color: #000000;
+    color: #fafafa;
+    padding: 1rem;
+}
+
+footer p:first-child {
+    color: #8cffae;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* descendant selectors */
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer a, footer a:visited {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+footer a:hover , footer a:active, footer a:focus {
+    color: #8cffae;
+}
+
+footer a[target="_blank"]::after{ /* attribute selector */
+    content: ' ↗';
+}
