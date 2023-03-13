@@ -1,7 +1,9 @@
 /* BASE ----------------------------------------------- */
 :root {
+    /* brand colours */
     --primary-bc: #8cffae;
     --secondary-bc: #b70ee6;
+    /* topic-specific */
     --canada: #e60505;
 }
 
@@ -32,7 +34,7 @@ a, a:visited {
     text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover, a:active, a:focus {
     text-decoration: underline 1px var(--secondary-bc) wavy;
 }
 
@@ -169,11 +171,22 @@ div>p {
     margin: 0;
 }
 
+#top-story h3 {
+    font-size: 2rem;
+}
+
+article:hover {
+    border-radius: 0;
+    border: 1px solid var(--secondary-bc);
+    scale: 0.95;
+    transition: all 0.3s linear;
+}
+
 @media (min-width: 50em){
     #top-story~section {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-flow: row;
+        grid-auto-flow: row dense;
         gap: 1rem;
         margin: 2rem auto 0;
     }
@@ -196,10 +209,9 @@ footer {
     font-size: 0.8rem;
 }
 
-footer p:first-child a{
-    color: var(--primary-bc);
-    font-size: 3rem;
-    font-weight: 800;
+footer p {
+    max-width: 30rem;
+    padding: 1rem 0;
 }
 
 footer span {
@@ -209,7 +221,6 @@ footer span {
 footer ul {
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 footer a, footer a:visited {
@@ -217,10 +228,19 @@ footer a, footer a:visited {
     text-decoration: none;
 }
 
-footer a:hover , footer a:active, footer a:focus {
+footer a:hover, footer a:active, footer a:focus {
     text-decoration: underline 1px var(--secondary-bc) wavy;
 }
 
-footer a[target="_blank"]::after{ /* attribute selector */
+footer a[target="_blank"]::after{
     content: ' ↗';
+}
+
+@media (min-width: 50em){
+    footer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5rem;
+    }
 }
