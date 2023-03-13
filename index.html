@@ -8,83 +8,99 @@
     <link rel="stylesheet" href="styles/normalize-fwd-mod.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header><h1>tldr;</h1></header>
+<body id="top">
+<div class="site-wrapper">
+    <header>
+        <h1><a href="index.html">tl;dr</a></h1>
+        <button class="nav-btn" id="nav-btn">
+            <span class="btn-content" tabindex="-1">
+              <span class="screen-reader-text">Menu</span>
+              <span class="bar" id="bar"></span>
+              <span class="bar" id="bar"></span>
+              <span class="bar" id="bar"></span>
+            </span>
+        </button>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#">Latest News</a></li>
+                <li><a href="#" class="canada">Canada News</a></li>
+                <li><a href="#">Connect</a></li>
+                <li><a href="#">About tl;dr</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <main>
-        <section>
+        <section id="top-story">
             <h2>Top Story</h2>
             <article>
-                <h3>Headline Headline Headline</h3>
-                <div>
-                    <p>Politics</p>
-                    <p>Global</p>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse, voluptatibus corrupti quae nesciunt minus ipsa numquam suscipit saepe error voluptatem aliquid iusto sunt iure illum. Nam, nihil! Quaerat, soluta!</p>
-            </article>
-        </section>
-        <section>
-            <h2>Latest</h2>
-            <article>
-                <h3>One year later, Chris Rock addresses the Will Smith Oscars slap</h3>
+                <h3>Canada's talent on full display for the 2023 JUNO Awards</h3>
                 <div>
                     <p>Entertainment</p>
-                    <p>Global</p>
+                    <p class="canada">Canada</p>
                 </div>
-                <p>"Will Smith practices selective outrage," says Rock in his new Netflix comedy special.</p>
-                <p>By Constance Grady</p>
+                <p>This year's JUNO Awards features some very familiar faces, including two-time superstar host Simu Liu, and performances by Alexisonfire and Jessie Reyez. </p>
             </article>
+        </section>
+
+        <section>
+            <h2>Latest Stories</h2>
             <article>
-                <h3>There’s no libertarian approach to preventing the end of the world</h3>
+                <h3>The UK’s extreme new immigration plans, explained</h3>
                 <div>
                     <p>Politics</p>
                     <p>Global</p>
                 </div>
-                <p>What Peter Thiel gets wrong about existential risk.</p>
-                <p>By Haydn Belfield</p>
+                <p>Tory plans to stop channel crossings may be more political than practical.</p>
             </article>
             <article>
-                <h3>How Havana syndrome helps us rethink the brain</h3>
+                <h3>9 questions about Silicon Valley Bank’s collapse, answered</h3>
                 <div>
-                    <p>Science</p>
-                    <p>Health</p>
+                    <p>Finance</p>
+                    <p>Technology</p>
                     <p>Global</p>
                 </div>
-                <p>A neurologist explains how its weird symptoms can manifest via a common but misunderstood class of brain ailments.</p>
-                <p>By Noam Hassenfeld</p>
+                <p>Banking regulators shut down Silicon Valley Bank, or SVB, on Friday after the bank suffered a sudden, swift collapse, marking the second-largest bank failure in US history.</p>
             </article>
             <article>
-                <h3>Musk’s Twitter is getting worse</h3>
+                <h3>India may become the largest country to legalize same-sex marriage. Here's how that could happen</h3>
+                <div>
+                    <p>Politics</p>
+                    <p>Society</p>
+                    <p>Global</p>
+                </div>
+                <p>Supreme Court cases challenge marriage laws in world's largest democracy</p>
+            </article>
+            <article>
+                <h3>Meta to block access to news on Facebook, Instagram if Online News Act adopted as-is</h3>
                 <div>
                     <p>Technology</p>
                     <p>Media</p>
-                    <p>Global</p>
                 </div>
-                <p>Links aren’t working on Twitter due to an "internal change" that had "some unintended consequences."</p>
-                <p>By Shirin Ghaffary</p>
+                <p>Google executives clashed with MPs over the digital policy bill this week
+                </p>
             </article>
             <article>
-                <h3>Silicon Valley’s AI frenzy isn’t just another crypto craze</h3>
+                <h3>Canada is racing to net zero. But do we have the data to get us there?</h3>
                 <div>
-                    <p>Technology</p>
-                    <p>Global</p>
+                    <p>Environment</p>
+                    <p class="canada">Canada</p>
                 </div>
-                <p>It isn’t theoretical. Millions of people are already using apps like ChatGPT to write books, create art, and develop code.</p>
+                <p>"That's the fundamental data gap to me: that we just don't report these extremely important energy indicators," said Nicholas Rivers, an associate professor at the University of Ottawa and a longtime climate economy modelling expert.</p>
             </article>
             <article>
-                <h3>Headline Headline Headline</h3>
+                <h3>The multiverse reigns supreme at Oscars as Everything Everywhere dominates, Canadians win big</h3>
                 <div>
-                    <p>Finance</p>
-                    <p>Canada</p>
+                    <p>Entertainment</p>
+                    <p>Media</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut quae quas est nihil recusandae!</p>
-                <p>By Shirin Ghaffary</p>
+                <p>Acting winners Quan, Yeoh, Fraser, Curtis all 1st-time nominees on slapless night in Hollywood.</p>
             </article>
         </section>
     </main>
     <footer>
-        <p>tldr;</p>
-       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi expedita, culpa ex possimus similique veniam!</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius beatae, saepe et sequi commodi maiores!</p>
+        <p><a href="#top">tl;dr</a></p>
+        <p><span>too long; didn't read</span> is a general interest news portal site</p>
         <ul>
             <li><a href="#">link</a></li>
             <li><a href="#" target="_blank">link</a></li>
@@ -92,7 +108,8 @@
             <li><a href="#">link</a></li>
             <li><a href="#" target="_blank">link</a></li>
         </ul>
-
     </footer>
+</div>
+<script src="scripts/main.js"></script>
 </body>
 </html>
